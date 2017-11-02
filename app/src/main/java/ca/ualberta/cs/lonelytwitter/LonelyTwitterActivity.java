@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import ca.ualberta.cs.lonelytweet.NormalLonelyTweet;
+
 public class LonelyTwitterActivity extends Activity {
 
 	private EditText bodyText;
@@ -19,6 +21,14 @@ public class LonelyTwitterActivity extends Activity {
 	private List<NormalLonelyTweet> tweets;
 	private ArrayAdapter<NormalLonelyTweet> adapter;
 	private TweetsFileManager tweetsProvider;
+
+	public List<NormalLonelyTweet> getTweets() {
+		return tweets;
+	}
+
+	public void setTweets(List<NormalLonelyTweet> tweets) {
+		this.tweets = tweets;
+	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
